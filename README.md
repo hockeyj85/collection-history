@@ -2,10 +2,15 @@
 hockeyj85:collection-history
 ============================
 
-A meteor package that tracks changes to a database.
+A meteor package that tracks changes to a mongo collection.
+
+** This package is a work in progress and will feature many a breaking change during the near future **
 
 Installation
 ============
+
+Clone this repo to the ```packages``` directory within your meteor app.
+
 
 ```bash
 meteor add hockeyj85:collection-history
@@ -33,4 +38,42 @@ Getting changes out
 ===================
 
 This package is incomplete, you can view the stored information using mongo queries on the collection which the history is stored in.
-An api for browsing changes is planned, but it is 3-6 months away.
+
+
+API
+===
+
+Expect many breaking changes here.
+
+*CollectionHistory*.auditCollection(collection)
+-----------------------------------------------
+Track ```collection```.
+
+
+*CollectionHistory*.documentWithDate(collection, _id, date)
+-----------------------------------------------------------
+Not working.
+
+*CollectionHistory*.diffsWithDate(collection, _id, date)
+--------------------------------------------------------
+Not working.
+
+*CollectionHistory*.prevDiff(_id)
+---------------------------------
+Get the diff immediately before _id.
+_id is:
+
+```js
+
+{
+    // other props
+    doc: {
+        _id: "a mongo Id"
+    }
+}
+
+```
+
+*CollectionHistory.nextDiff(_id)
+--------------------------------
+Get the diff immediately after _id.
