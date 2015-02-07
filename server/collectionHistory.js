@@ -42,7 +42,7 @@ var _recordAfterUpdate = function(collection, userId, next, prev) {
 
 	if (Meteor.isServer) {
 		/* Find diff */
-		var deepDiff = Meteor.npmRequire('deep-diff');
+		var deepDiff = DeepDiff;
 		var diff = deepDiff(prev, next);
 
 		/* Store diff */
