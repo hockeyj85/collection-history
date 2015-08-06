@@ -1,3 +1,6 @@
+# **This project is not in a usable state**
+
+Some of the things listed here have been implemented, some have not. Most will change when I have some more time to come back to this project.
 
 hockeyj85:collection-history
 ============================
